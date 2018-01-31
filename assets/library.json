@@ -1,0 +1,19 @@
+{
+"frames": {
+	"grey.png": {
+		"frame": {"x":0, "y":13, "w":12, "h":12},
+		"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
+		"sourceSize": {"w":12,"h":12}
+	},
+	"yellow.png": {
+		"frame": {"x":0, "y":0, "w":12, "h":12},
+		"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
+		"sourceSize": {"w":12,"h":12}
+	}
+},
+"meta": {
+	"image": "library.png",
+	"size": {"w": 13, "h": 26},
+	"scale": "1"
+}
+}

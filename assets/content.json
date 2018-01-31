@@ -1,0 +1,7 @@
+{
+  "snake": {
+    "columns": 70,
+    "rows": 30,
+    "speed": 80
+  }
+}
