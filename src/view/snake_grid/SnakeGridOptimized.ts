@@ -39,12 +39,15 @@ namespace snake {
         }
 
         update(snake: Array<Point>, food: Point) {
-            this.snakeAndFood.removeChildren()
             snake = snake.concat(food)
             const length: number = snake.length
             for (var i = 0; i < length; i++) {
-                var cell: Sprite = new Sprite(this.cellSelected)
-                this.snakeAndFood.addChild(cell)
+                if (this.snakeAndFood.children[i] != undefined) {
+                    var cell: Sprite = this.snakeAndFood.children[i] as Sprite;
+                } else {
+                    cell = new Sprite(this.cellSelected)
+                    this.snakeAndFood.addChild(cell)
+                }
                 cell.x = snake[i].x * cell.width
                 cell.y = snake[i].y * cell.height
             }

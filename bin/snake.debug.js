@@ -675,12 +675,25 @@ var snake;
             }
         }
         SnakeGridOptimized.prototype.update = function (snake, food) {
-            this.snakeAndFood.removeChildren();
+            // this.snakeAndFood.removeChildren()
+            // snake = snake.concat(food)
+            // const length: number = snake.length
+            // for (var i = 0; i < length; i++) {
+            //     var cell: Sprite = new Sprite(this.cellSelected)
+            //     this.snakeAndFood.addChild(cell)
+            //     cell.x = snake[i].x * cell.width
+            //     cell.y = snake[i].y * cell.height
+            // }
             snake = snake.concat(food);
             var length = snake.length;
             for (var i = 0; i < length; i++) {
-                var cell = new Sprite(this.cellSelected);
-                this.snakeAndFood.addChild(cell);
+                if (this.snakeAndFood.children[i] != undefined) {
+                    var cell = this.snakeAndFood.children[i];
+                }
+                else {
+                    cell = new Sprite(this.cellSelected);
+                    this.snakeAndFood.addChild(cell);
+                }
                 cell.x = snake[i].x * cell.width;
                 cell.y = snake[i].y * cell.height;
             }
